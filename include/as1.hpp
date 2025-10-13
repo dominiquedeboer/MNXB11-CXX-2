@@ -31,5 +31,4 @@ namespace homework {
 
   };
 
-
 } // namespace homework

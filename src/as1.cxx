@@ -2,8 +2,28 @@
 
 namespace homework {
 
-void swap_ptr(int* a, int* b, int *c) { return;}
+void swap_ptr(int* a, int* b, int* c) { 
+    // ptr a should get the value of ptr b
+    *a = *b;
+    // ptr b should get the value of ptr c
+    *b = *c ;
+    // ptr c should get the value of ptr a
+    *c = *a;
+    return;
+}
 
 
+UniqueData::UniqueData(int value){
+  data_ = std::make_unique<int>(value);
+}
+
+int UniqueData::get() const {
+  return *data_;
+}
+
+void UniqueData::set(int value){
+  *data_ = value;
+  return;
+}
 
 }; // namespace homework
