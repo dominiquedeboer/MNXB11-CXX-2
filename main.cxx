@@ -4,6 +4,7 @@
  * */
 
 #include "include/as1.hpp"
+#include "include/as2.hpp"
 #include <iostream>
 
 using namespace homework;
@@ -24,13 +25,26 @@ using namespace homework;
 
 // }
 
+// int main() {
+//     homework::UniqueData val(5);
+//     std::cout << val.get();
+
+//     val.set(3);
+//     std::cout << val.get();
+
+//     return 0;
+// }
+
 int main() {
-    homework::UniqueData val(5);
-    std::cout << val.get();
+    homework::Knight k("Jip");
+    k.setWeapon("sword");
 
-    val.set(3);
-    std::cout << val.get();
+    homework::Sorcerer s("Janneke");
+    s.setAbility("blast");
 
+    homework::Duel<homework::Knight, homework::Sorcerer> duel(&k, &s);
+    auto winner = duel.fight();
+
+    std::cout << "the winner (clone) is " << winner->getName() << std::endl;
     return 0;
 }
-
