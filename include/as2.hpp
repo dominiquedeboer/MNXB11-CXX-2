@@ -112,11 +112,9 @@ namespace homework {
       entity2_->attack();
 
       auto random_number = dist(gen);
+      Entity* winner = entity2_;
       if (random_number < 0.5) {
         Entity* winner = entity1_;
-      }
-      else {
-        Entity* winner = entity2_;
       }
       
       std::cout << winner->getName() << "wins duel" << std::endl;
