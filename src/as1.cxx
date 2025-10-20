@@ -3,12 +3,13 @@
 namespace homework {
 
 void swap_ptr(int* a, int* b, int* c) { 
+    int extra = *a;
     // ptr a should get the value of ptr b
     *a = *b;
     // ptr b should get the value of ptr c
     *b = *c ;
     // ptr c should get the value of ptr a
-    *c = *a;
+    *c = extra;
     return;
 }
 
